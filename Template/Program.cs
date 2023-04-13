@@ -1,5 +1,6 @@
 ﻿var solver = new Solver(new ConsoleReader());
 var answer = solver.Solve();
+Console.WriteLine(answer);
 
 public interface IReader
 {
