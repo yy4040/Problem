@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Etc
+*/bin/
+*/obj/
+*.user
+.idea/
