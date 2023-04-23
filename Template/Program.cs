@@ -15,9 +15,11 @@ public class ConsoleReader : IReader
 public static class StringExtension
 {
     public static int ToInt(this string s) => int.Parse(s);
-    public static int[] ToIntArray(this string s) => s
+    public static IEnumerable<int> ToIntEnumerable(this string s) => s
         .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-        .Select(int.Parse)
+        .Select(int.Parse);
+    public static int[] ToIntArray(this string s) => s
+        .ToIntEnumerable()
         .ToArray();
 }
 
